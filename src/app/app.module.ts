@@ -9,15 +9,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { Toast } from '@ionic-native/toast/ngx';
+
+import { HttpModule } from '@angular/http';
+
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-  ],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    entryComponents: [],
+    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpModule],
+    providers: [
+        StatusBar,
+        SplashScreen,
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+        BarcodeScanner,
+        Toast
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
