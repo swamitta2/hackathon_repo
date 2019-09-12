@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Ionic Image Processor
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+        My first ionic app !!
+        <p>
+            If you get lost, the
+            <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will
+            be your guide.
+        </p>
+    </div>
+    <img src="{{ current_image }}" class="picture" />
+    <h1 align="center">
+        <button ion-button color="dark" full round (click)="captureImage()">Click picture</button>
+    </h1>
+    <ion-card *ngIf="found">
+        <h3 class="text-center">{{ image_description }}</h3>
+    </ion-card>
+</ion-content>
