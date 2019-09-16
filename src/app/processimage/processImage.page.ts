@@ -14,7 +14,7 @@ export class ProcessImage {
     products: any;
     imageDescription: any;
     found: boolean = false;
-    apikey: String = 'AIzaSyCd9SNJY2Y_DP-XwKKilOal5Zia_G0MFtE';
+    apikey: String = '';
     current_image = '../../assets/images/happy.jpg';
 
     constructor(
